@@ -1,8 +1,0 @@
-<?xml version="1.0"?>
-<layout version="0.1.0">
-	<default>
-		<reference name="head" before="-">
-			<block type="darwin/darwin" name="darwin_pricing" as="darwin_pricing" template="darwin/dp.phtml" />
-		</reference>
-	</default>
-</layout> 

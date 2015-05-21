@@ -1,18 +1,73 @@
 <?xml version="1.0"?>
 <package>
-    <name>Magebuzz_Darwin</name>
-    <version>0.1.0</version>
+    <name>Darwin_Pricing</name>
+    <version>1.0.0</version>
     <stability>stable</stability>
     <license uri="http://opensource.org/licenses/osl-3.0.php">OSL 3.0</license>
     <channel>community</channel>
     <extends/>
-    <summary>Integrate Magento with Darwin Pricing system. </summary>
-    <description>Automatically add Darwin Pricing script to Magento store. It allows you to track visitors, orders, benefits through Darwin Pricing admin page.</description>
-    <notes>First Release</notes>
-    <authors><author><name>Magebuzz</name><user>magebuzz</user><email>magebuzz@gmail.com</email></author></authors>
-    <date>2015-05-13</date>
-    <time>03:16:26</time>
-    <contents><target name="magecommunity"><dir name="Magebuzz"><dir name="Darwin"><dir name="Block"><file name="Darwin.php" hash="c6195d9aadee05b0900ab39826dd50de"/></dir><dir name="Helper"><file name="Data.php" hash="cd43c6c0d3c1dd0800a966697145629d"/></dir><dir name="Model"><file name="Observer.php" hash="d8738056ef8c1c2788c458fe382fcca4"/></dir><dir name="controllers"><file name="IndexController.php" hash="cb4e4be6ab89282c1424d393d3d53a43"/></dir><dir name="etc"><file name="adminhtml.xml" hash="3a141d2120d48d7ddff29c4cd8ad3f04"/><file name="config.xml" hash="77f52892a335c00b3fbe5c914972ac38"/><file name="system.xml" hash="58bc7c2c9ae58b90a32fc69de7f347a8"/></dir></dir></dir></target><target name="magedesign"><dir name="frontend"><dir name="base"><dir name="default"><dir name="template"><dir name="darwin"><file name="dp.phtml" hash="496720623f7fb3d0bb0c3e66615057b5"/></dir></dir><dir name="layout"><file name="darwin.xml" hash="65b926b248fc4a386b2957839692f663"/></dir></dir></dir></dir></target><target name="mageetc"><dir name="modules"><file name="Magebuzz_Darwin.xml" hash="c0ce6e6d10f135ac1c3711c76e134e21"/></dir></target></contents>
+    <summary>Boost your Profits with Dynamic Pricing</summary>
+    <description>Launch sales campaigns in the physical locations you're targeting. Optimize your geo-targeting in real-time to boost your profits!</description>
+    <notes/>
+    <authors>
+        <author>
+            <name>Darwin Pricing</name>
+            <user>SebastienFauvel</user>
+            <email>sebastien.fauvel@gmx.ch</email>
+        </author>
+    </authors>
+    <date>2015-05-20</date>
+    <time>12:00:00</time>
+    <contents>
+        <target name="magecommunity">
+            <dir name="FC">
+                <dir name="DarwinPricing">
+                    <dir name="Block">
+                        <file name="DarwinPricing.php" hash="4171eb6cd65111068a3760380fed4929"/>
+                    </dir>
+                    <dir name="Helper">
+                        <file name="Data.php" hash="7697e92ec763fcdce1f6a93639130db9"/>
+                    </dir>
+                    <dir name="Model">
+                        <file name="Observer.php" hash="bcb88dc2f7ee94067334c3ba645654bd"/>
+                    </dir>
+                    <dir name="etc">
+                        <file name="adminhtml.xml" hash="719d8529d34e03f693dfb0a7e3f668c5"/>
+                        <file name="config.xml" hash="8bc0c16a37b525d4151e3cd23769c37d"/>
+                        <file name="system.xml" hash="631bcc05c9fbd4996f2edff51e91ba4b"/>
+                    </dir>
+                </dir>
+            </dir>
+        </target>
+        <target name="magedesign">
+            <dir name="frontend">
+                <dir name="base">
+                    <dir name="default">
+                        <dir name="layout">
+                            <file name="DarwinPricing.xml" hash="97049b246b6cbe83a266958a52068df9"/>
+                        </dir>
+                        <dir name="template">
+                            <dir name="DarwinPricing">
+                                <file name="DarwinPricing.php" hash="3b934f0e1e9849abdbc4a4f5e7c804d2"/>
+                            </dir>
+                        </dir>
+                    </dir>
+                </dir>
+            </dir>
+        </target>
+        <target name="mageetc">
+            <dir name="modules">
+                <file name="FC_DarwinPricing.xml" hash="4f63d03730af023d48751a6d59166eb3"/>
+            </dir>
+        </target>
+    </contents>
     <compatible/>
-    <dependencies><required><php><min>5.1.0</min><max>6.0.0</max></php></required></dependencies>
+    <dependencies>
+        <required>
+            <php>
+                <min>5.1.0</min>
+                <max>6.0.0</max>
+            </php>
+        </required>
+    </dependencies>
 </package>

@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<layout version="1.0.0">
+    <default>
+        <reference name="head" before="-">
+            <block type="DarwinPricing/DarwinPricing" name="DarwinPricing" as="DarwinPricing" template="DarwinPricing/DarwinPricing.php" />
+        </reference>
+    </default>
+</layout>
+ 

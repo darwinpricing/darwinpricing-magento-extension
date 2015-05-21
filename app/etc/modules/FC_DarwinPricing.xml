@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <FC_DarwinPricing>
+            <active>true</active>
+            <codePool>community</codePool>
+        </FC_DarwinPricing>
+    </modules>
+</config>
