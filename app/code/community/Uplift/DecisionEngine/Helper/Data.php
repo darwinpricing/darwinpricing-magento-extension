@@ -1,6 +1,6 @@
 <?php
 
-class FC_DarwinPricing_Helper_Data extends Mage_Core_Helper_Abstract {
+class Uplift_DecisionEngine_Helper_Data extends Mage_Core_Helper_Abstract {
 
     protected $_storeId;
 
@@ -10,19 +10,19 @@ class FC_DarwinPricing_Helper_Data extends Mage_Core_Helper_Abstract {
     }
 
     public function isActive() {
-        return Mage::getStoreConfig('DarwinPricing/general/is_active', $this->_storeId);
+        return Mage::getStoreConfig('DecisionEngine/general/is_active', $this->_storeId);
     }
 
     public function getApiUrl() {
-        return Mage::getStoreConfig('DarwinPricing/general/api_url', $this->_storeId);
+        return Mage::getStoreConfig('DecisionEngine/general/api_url', $this->_storeId);
     }
 
     public function getApiUser() {
-        return Mage::getStoreConfig('DarwinPricing/general/api_user', $this->_storeId);
+        return Mage::getStoreConfig('DecisionEngine/general/api_user', $this->_storeId);
     }
 
     public function getSecretKey() {
-        return Mage::getStoreConfig('DarwinPricing/general/secret_key', $this->_storeId);
+        return Mage::getStoreConfig('DecisionEngine/general/secret_key', $this->_storeId);
     }
 
     public function getWidgetUrl() {

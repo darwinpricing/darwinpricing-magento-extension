@@ -1,6 +1,6 @@
 <?php
 
-class FC_DarwinPricing_Model_Observer {
+class Uplift_DecisionEngine_Model_Observer {
 
     public function postOrder(Varien_Event_Observer $observer) {
         $invoice = $observer->getEvent()->getInvoice();
@@ -25,7 +25,7 @@ class FC_DarwinPricing_Model_Observer {
                 'unit_price' => $item->getPrice(),
             );
         }
-        Mage::helper('DarwinPricing')->postOrder($orderDetails);
+        Mage::helper('DecisionEngine')->postOrder($orderDetails);
     }
 
     public function postRefund(Varien_Event_Observer $observer) {
@@ -49,7 +49,7 @@ class FC_DarwinPricing_Model_Observer {
                 'unit_price' => $item->getPrice(),
             );
         }
-        Mage::helper('DarwinPricing')->postRefund($refundDetails);
+        Mage::helper('DecisionEngine')->postRefund($refundDetails);
     }
 
 }

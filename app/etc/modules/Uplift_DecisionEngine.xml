@@ -1,9 +1,9 @@
 <?xml version="1.0"?>
 <config>
     <modules>
-        <FC_DarwinPricing>
+        <Uplift_DecisionEngine>
             <active>true</active>
             <codePool>community</codePool>
-        </FC_DarwinPricing>
+        </Uplift_DecisionEngine>
     </modules>
 </config>
