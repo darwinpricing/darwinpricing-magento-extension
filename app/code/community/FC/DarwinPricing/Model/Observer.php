@@ -21,8 +21,10 @@ class FC_DarwinPricing_Model_Observer {
         foreach ($order->getAllVisibleItems() as $item) {
             $orderDetails['items'][] = array(
                 'id' => $item->getProductId(),
+                'sku' => $item->getSku(),
                 'qty' => $item->getQtyOrdered(),
                 'unit_price' => $item->getPrice(),
+                'unit_cost' => $item->getBaseCost(),
             );
         }
         Mage::helper('DarwinPricing')->postOrder($orderDetails);
@@ -45,8 +47,10 @@ class FC_DarwinPricing_Model_Observer {
         foreach ($creditMemo->getAllItems() as $item) {
             $refundDetails['items'][] = array(
                 'id' => $item->getProductId(),
+                'sku' => $item->getSku(),
                 'qty' => $item->getQty(),
                 'unit_price' => $item->getPrice(),
+                'unit_cost' => $item->getBaseCost(),
             );
         }
         Mage::helper('DarwinPricing')->postRefund($refundDetails);
