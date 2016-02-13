@@ -1,16 +1,6 @@
 <?php
 
 if ($this->isActive()) {
-    $widgetUrl = $this->getWidgetUrl();
-    print <<<EOD
-<script>
-    (function (s, n) {
-        s = document.createElement('script');
-        s.async = 1;
-        s.src = '{$widgetUrl}';
-        n = document.getElementsByTagName('script')[0];
-        n.parentNode.insertBefore(s, n);
-    })();
-</script>
-EOD;
+    $src = json_encode($this->getWidgetUrl());
+    print "<script>(function(d,t,s,f){s=d.createElement(t);s.async=1;s.src={$src};f=d.getElementsByTagName(t)[0];f.parentNode.insertBefore(s,f)})(document,'script')</script>";
 }
