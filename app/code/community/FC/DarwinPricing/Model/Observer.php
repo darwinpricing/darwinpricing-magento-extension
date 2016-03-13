@@ -12,6 +12,7 @@ class FC_DarwinPricing_Model_Observer {
         $orderDetails['currency'] = $order->getOrderCurrencyCode();
         $orderDetails['coupon_code'] = $order->getCouponCode();
         $orderDetails['shipping_amount'] = $order->getShippingAmount();
+        $orderDetails['taxes'] = $order->getTaxAmount();
         $orderDetails['customer'] = array(
             'id' => $order->getCustomerId(),
             'email_address' => $order->getCustomerEmail(),
@@ -38,6 +39,7 @@ class FC_DarwinPricing_Model_Observer {
         $refundDetails['order_id'] = $order->getId();
         $refundDetails['refunded_amount'] = $creditMemo->getGrandTotal();
         $refundDetails['currency'] = $order->getOrderCurrencyCode();
+        $refundDetails['refunded_taxes'] = $creditMemo->getTaxAmount();
         $refundDetails['customer'] = array(
             'id' => $order->getCustomerId(),
             'email_address' => $order->getCustomerEmail(),
