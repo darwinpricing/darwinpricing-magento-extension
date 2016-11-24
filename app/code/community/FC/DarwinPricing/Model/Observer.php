@@ -2,6 +2,9 @@
 
 class FC_DarwinPricing_Model_Observer {
 
+    /**
+     * @param Varien_Event_Observer $observer
+     */
     public function postOrder(Varien_Event_Observer $observer) {
         $darwinPricingHelper = Mage::helper('DarwinPricing');
         if (!$darwinPricingHelper->isActive()) {
@@ -35,6 +38,9 @@ class FC_DarwinPricing_Model_Observer {
         $darwinPricingHelper->postOrder($orderDetails);
     }
 
+    /**
+     * @param Varien_Event_Observer $observer
+     */
     public function postRefund(Varien_Event_Observer $observer) {
         $darwinPricingHelper = Mage::helper('DarwinPricing');
         if (!$darwinPricingHelper->isActive()) {
