@@ -2,7 +2,7 @@
 <config>
     <modules>
         <FC_DarwinPricing>
-            <version>1.2.0</version>
+            <version>1.2.1</version>
         </FC_DarwinPricing>
     </modules>
     <frontend>

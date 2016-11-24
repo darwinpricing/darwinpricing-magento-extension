@@ -3,6 +3,10 @@
 class FC_DarwinPricing_Model_Observer {
 
     public function postOrder(Varien_Event_Observer $observer) {
+        $darwinPricingHelper = Mage::helper('DarwinPricing');
+        if (!$darwinPricingHelper->isActive()) {
+            return;
+        }
         $invoice = $observer->getEvent()->getInvoice();
         $orderId = $invoice->getOrderId();
         $order = Mage::getModel('sales/order')->load($orderId);
@@ -28,10 +32,14 @@ class FC_DarwinPricing_Model_Observer {
                 'unit_cost' => $item->getBaseCost(),
             );
         }
-        Mage::helper('DarwinPricing')->postOrder($orderDetails);
+        $darwinPricingHelper->postOrder($orderDetails);
     }
 
     public function postRefund(Varien_Event_Observer $observer) {
+        $darwinPricingHelper = Mage::helper('DarwinPricing');
+        if (!$darwinPricingHelper->isActive()) {
+            return;
+        }
         $creditMemo = $observer->getEvent()->getCreditmemo();
         $order = $creditMemo->getOrder();
         $refundDetails = array();
@@ -55,7 +63,7 @@ class FC_DarwinPricing_Model_Observer {
                 'unit_cost' => $item->getBaseCost(),
             );
         }
-        Mage::helper('DarwinPricing')->postRefund($refundDetails);
+        $darwinPricingHelper->postRefund($refundDetails);
     }
 
 }

@@ -4,7 +4,7 @@ return array(
     'base_dir' => __DIR__,
     'archive_files' => 'FC_DarwinPricing.tar',
     'extension_name' => 'FC_DarwinPricing',
-    'extension_version' => '1.2.0',
+    'extension_version' => '1.2.1',
     'skip_version_compare' => false,
     'auto_detect_version' => false,
     'path_output' => __DIR__,
